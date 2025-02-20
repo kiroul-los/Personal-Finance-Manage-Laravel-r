@@ -13,6 +13,18 @@
 
     <div class="container mx-auto p-6">
         <div class="overflow-x-auto bg-white shadow-lg rounded-2xl p-4">
+
+            @if(session('warning'))
+                <div class="bg-yellow-200 text-yellow-800 p-3 rounded mb-4">
+                    {{ session('warning') }}
+                </div>
+            @endif
+
+            @if(session('success'))
+                <div class="bg-green-200 text-green-800 p-3 rounded mb-4">
+                    {{ session('success') }}
+                </div>
+            @endif
             <table class="w-full text-sm text-gray-700 border-collapse">
                 <thead>
                 <tr class="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
